@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Explorer</h1>
+        
+        <section class="load-data">
+            <h2>Load Courses (JSON)</h2>
+            <input type="file" id="json-file-input" accept=".json">
+            <p id="error-message" class="error-text"></p>
+        </section>
+
+        <hr>
+
+        <section class="sort-and-filter">
+            <h2>Sort and Filter</h2>
+            <div class="controls-grid">
+                <div class="control-group">
+                    <label for="department-filter">Department:</label>
+                    <select id="department-filter" class="filter-dropdown"></select>
+                </div>
+                <div class="control-group">
+                    <label for="level-filter">Level:</label>
+                    <select id="level-filter" class="filter-dropdown"></select>
+                </div>
+                <div class="control-group">
+                    <label for="credits-filter">Credits:</label>
+                    <select id="credits-filter" class="filter-dropdown"></select>
+                </div>
+                <div class="control-group">
+                    <label for="instructor-filter">Instructor:</label>
+                    <select id="instructor-filter" class="filter-dropdown"></select>
+                </div>
+                
+                <div class="control-group">
+                    <label for="sort-by">Sort By:</label>
+                    <select id="sort-by"></select>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="course-display">
+            <div class="course-list-container">
+                <div id="course-list">
+                    </div>
+            </div>
+            
+            <div id="course-details">
+                <p>Click on a course ID on the left to see details.</p>
+                </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
